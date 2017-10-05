@@ -7,25 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1325834E1F8577B80074683C /* INVDrugSourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1325834D1F8577B80074683C /* INVDrugSourceCell.m */; };
+		134ACF751F834A7E00697119 /* INVSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134ACF741F834A7E00697119 /* INVSliderViewController.m */; };
+		134ACF781F834CD100697119 /* INVDrugSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 134ACF771F834CD100697119 /* INVDrugSliderView.m */; };
+		134ACF7E1F8377BF00697119 /* INVAnalogsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 134ACF7D1F8377BF00697119 /* INVAnalogsSample.m */; };
+		134ACF811F837E9D00697119 /* INVDrugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 134ACF801F837E9D00697119 /* INVDrugView.m */; };
+		134ACF8C1F83A92F00697119 /* INVForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 134ACF8B1F83A92F00697119 /* INVForm.m */; };
+		134ACF8F1F83BDE700697119 /* INVDrugName.m in Sources */ = {isa = PBXBuildFile; fileRef = 134ACF8E1F83BDE700697119 /* INVDrugName.m */; };
+		134ACF921F83BF8500697119 /* INVFormsWithDrugNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 134ACF911F83BF8500697119 /* INVFormsWithDrugNames.m */; };
+		1357EFC31F84FE7300767302 /* INVFormAndDrugNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1357EFC21F84FE7300767302 /* INVFormAndDrugNameCell.m */; };
+		1357EFC61F8515A300767302 /* INVSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1357EFC51F8515A300767302 /* INVSearchResultsViewController.m */; };
+		1357EFC91F85203200767302 /* INVDrugAnalogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1357EFC81F85203200767302 /* INVDrugAnalogsViewController.m */; };
+		1357EFCC1F8523FA00767302 /* INVDrugCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1357EFCB1F8523FA00767302 /* INVDrugCell.m */; };
+		1357EFCF1F85373000767302 /* INVStarsRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1357EFCE1F85373000767302 /* INVStarsRatingView.m */; };
 		13E7F0241F82652700469670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E7F0231F82652700469670 /* AppDelegate.m */; };
-		13E7F0271F82652700469670 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E7F0261F82652700469670 /* ViewController.m */; };
 		13E7F02A1F82652700469670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E7F0281F82652700469670 /* Main.storyboard */; };
 		13E7F02C1F82652700469670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E7F02B1F82652700469670 /* Assets.xcassets */; };
 		13E7F02F1F82652700469670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E7F02D1F82652700469670 /* LaunchScreen.storyboard */; };
 		13E7F0321F82652700469670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E7F0311F82652700469670 /* main.m */; };
+		13E7F03A1F82670400469670 /* INVMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E7F0391F82670400469670 /* INVMainViewController.m */; };
+		13E7F03D1F8269F600469670 /* INVDrug.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E7F03C1F8269F600469670 /* INVDrug.m */; };
+		13E7F0491F82768800469670 /* INVDrugAnalogsSamples.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E7F0481F82768800469670 /* INVDrugAnalogsSamples.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1325834C1F8577B80074683C /* INVDrugSourceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVDrugSourceCell.h; sourceTree = "<group>"; };
+		1325834D1F8577B80074683C /* INVDrugSourceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVDrugSourceCell.m; sourceTree = "<group>"; };
+		134ACF731F834A7E00697119 /* INVSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVSliderViewController.h; sourceTree = "<group>"; };
+		134ACF741F834A7E00697119 /* INVSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVSliderViewController.m; sourceTree = "<group>"; };
+		134ACF761F834CD100697119 /* INVDrugSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVDrugSliderView.h; sourceTree = "<group>"; };
+		134ACF771F834CD100697119 /* INVDrugSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVDrugSliderView.m; sourceTree = "<group>"; };
+		134ACF7C1F8377BF00697119 /* INVAnalogsSample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVAnalogsSample.h; sourceTree = "<group>"; };
+		134ACF7D1F8377BF00697119 /* INVAnalogsSample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVAnalogsSample.m; sourceTree = "<group>"; };
+		134ACF7F1F837E9D00697119 /* INVDrugView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVDrugView.h; sourceTree = "<group>"; };
+		134ACF801F837E9D00697119 /* INVDrugView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVDrugView.m; sourceTree = "<group>"; };
+		134ACF8A1F83A92F00697119 /* INVForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVForm.h; sourceTree = "<group>"; };
+		134ACF8B1F83A92F00697119 /* INVForm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVForm.m; sourceTree = "<group>"; };
+		134ACF8D1F83BDE700697119 /* INVDrugName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVDrugName.h; sourceTree = "<group>"; };
+		134ACF8E1F83BDE700697119 /* INVDrugName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVDrugName.m; sourceTree = "<group>"; };
+		134ACF901F83BF8500697119 /* INVFormsWithDrugNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVFormsWithDrugNames.h; sourceTree = "<group>"; };
+		134ACF911F83BF8500697119 /* INVFormsWithDrugNames.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVFormsWithDrugNames.m; sourceTree = "<group>"; };
+		1357EFC11F84FE7300767302 /* INVFormAndDrugNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVFormAndDrugNameCell.h; sourceTree = "<group>"; };
+		1357EFC21F84FE7300767302 /* INVFormAndDrugNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVFormAndDrugNameCell.m; sourceTree = "<group>"; };
+		1357EFC41F8515A300767302 /* INVSearchResultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVSearchResultsViewController.h; sourceTree = "<group>"; };
+		1357EFC51F8515A300767302 /* INVSearchResultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVSearchResultsViewController.m; sourceTree = "<group>"; };
+		1357EFC71F85203200767302 /* INVDrugAnalogsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVDrugAnalogsViewController.h; sourceTree = "<group>"; };
+		1357EFC81F85203200767302 /* INVDrugAnalogsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVDrugAnalogsViewController.m; sourceTree = "<group>"; };
+		1357EFCA1F8523FA00767302 /* INVDrugCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVDrugCell.h; sourceTree = "<group>"; };
+		1357EFCB1F8523FA00767302 /* INVDrugCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVDrugCell.m; sourceTree = "<group>"; };
+		1357EFCD1F85373000767302 /* INVStarsRatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVStarsRatingView.h; sourceTree = "<group>"; };
+		1357EFCE1F85373000767302 /* INVStarsRatingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVStarsRatingView.m; sourceTree = "<group>"; };
 		13E7F01F1F82652700469670 /* InvoltaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvoltaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E7F0221F82652700469670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13E7F0231F82652700469670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		13E7F0251F82652700469670 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		13E7F0261F82652700469670 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		13E7F0291F82652700469670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13E7F02B1F82652700469670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13E7F02E1F82652700469670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13E7F0301F82652700469670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13E7F0311F82652700469670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13E7F0381F82670400469670 /* INVMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVMainViewController.h; sourceTree = "<group>"; };
+		13E7F0391F82670400469670 /* INVMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVMainViewController.m; sourceTree = "<group>"; };
+		13E7F03B1F8269F600469670 /* INVDrug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVDrug.h; sourceTree = "<group>"; };
+		13E7F03C1F8269F600469670 /* INVDrug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVDrug.m; sourceTree = "<group>"; };
+		13E7F0471F82768800469670 /* INVDrugAnalogsSamples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INVDrugAnalogsSamples.h; sourceTree = "<group>"; };
+		13E7F0481F82768800469670 /* INVDrugAnalogsSamples.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INVDrugAnalogsSamples.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +84,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		130662EA1F833F020051AFA3 /* Search User Case */ = {
+			isa = PBXGroup;
+			children = (
+				134ACF881F83A8EC00697119 /* Model */,
+				1357EFC01F84F14C00767302 /* View */,
+				134ACF891F83A8FA00697119 /* Controller */,
+			);
+			name = "Search User Case";
+			sourceTree = "<group>";
+		};
+		130662EB1F833F450051AFA3 /* Main User Case */ = {
+			isa = PBXGroup;
+			children = (
+				130662ED1F833F630051AFA3 /* Model */,
+				130662EE1F83401A0051AFA3 /* View */,
+				130662EC1F833F530051AFA3 /* Controller */,
+			);
+			name = "Main User Case";
+			sourceTree = "<group>";
+		};
+		130662EC1F833F530051AFA3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				134ACF731F834A7E00697119 /* INVSliderViewController.h */,
+				134ACF741F834A7E00697119 /* INVSliderViewController.m */,
+				13E7F0381F82670400469670 /* INVMainViewController.h */,
+				13E7F0391F82670400469670 /* INVMainViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		130662ED1F833F630051AFA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13E7F0471F82768800469670 /* INVDrugAnalogsSamples.h */,
+				13E7F0481F82768800469670 /* INVDrugAnalogsSamples.m */,
+				134ACF7C1F8377BF00697119 /* INVAnalogsSample.h */,
+				134ACF7D1F8377BF00697119 /* INVAnalogsSample.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		130662EE1F83401A0051AFA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				134ACF7F1F837E9D00697119 /* INVDrugView.h */,
+				134ACF801F837E9D00697119 /* INVDrugView.m */,
+				134ACF761F834CD100697119 /* INVDrugSliderView.h */,
+				134ACF771F834CD100697119 /* INVDrugSliderView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		134ACF881F83A8EC00697119 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				134ACF901F83BF8500697119 /* INVFormsWithDrugNames.h */,
+				134ACF911F83BF8500697119 /* INVFormsWithDrugNames.m */,
+				134ACF8D1F83BDE700697119 /* INVDrugName.h */,
+				134ACF8E1F83BDE700697119 /* INVDrugName.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		134ACF891F83A8FA00697119 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1357EFC41F8515A300767302 /* INVSearchResultsViewController.h */,
+				1357EFC51F8515A300767302 /* INVSearchResultsViewController.m */,
+				1357EFC71F85203200767302 /* INVDrugAnalogsViewController.h */,
+				1357EFC81F85203200767302 /* INVDrugAnalogsViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1357EFC01F84F14C00767302 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1357EFC11F84FE7300767302 /* INVFormAndDrugNameCell.h */,
+				1357EFC21F84FE7300767302 /* INVFormAndDrugNameCell.m */,
+				1325834C1F8577B80074683C /* INVDrugSourceCell.h */,
+				1325834D1F8577B80074683C /* INVDrugSourceCell.m */,
+				1357EFCA1F8523FA00767302 /* INVDrugCell.h */,
+				1357EFCB1F8523FA00767302 /* INVDrugCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1357EFD01F85439600767302 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1357EFD21F85440900767302 /* Model */,
+				1357EFD11F8543E800767302 /* View */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		1357EFD11F8543E800767302 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13E7F0281F82652700469670 /* Main.storyboard */,
+				1357EFCD1F85373000767302 /* INVStarsRatingView.h */,
+				1357EFCE1F85373000767302 /* INVStarsRatingView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1357EFD21F85440900767302 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				134ACF8A1F83A92F00697119 /* INVForm.h */,
+				134ACF8B1F83A92F00697119 /* INVForm.m */,
+				13E7F03B1F8269F600469670 /* INVDrug.h */,
+				13E7F03C1F8269F600469670 /* INVDrug.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		13E7F0161F82652700469670 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +221,11 @@
 		13E7F0211F82652700469670 /* InvoltaTest */ = {
 			isa = PBXGroup;
 			children = (
+				1357EFD01F85439600767302 /* Shared */,
+				130662EB1F833F450051AFA3 /* Main User Case */,
+				130662EA1F833F020051AFA3 /* Search User Case */,
 				13E7F0221F82652700469670 /* AppDelegate.h */,
 				13E7F0231F82652700469670 /* AppDelegate.m */,
-				13E7F0251F82652700469670 /* ViewController.h */,
-				13E7F0261F82652700469670 /* ViewController.m */,
-				13E7F0281F82652700469670 /* Main.storyboard */,
 				13E7F02B1F82652700469670 /* Assets.xcassets */,
 				13E7F02D1F82652700469670 /* LaunchScreen.storyboard */,
 				13E7F0301F82652700469670 /* Info.plist */,
@@ -102,7 +265,7 @@
 				TargetAttributes = {
 					13E7F01E1F82652700469670 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -142,9 +305,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13E7F0271F82652700469670 /* ViewController.m in Sources */,
+				134ACF8F1F83BDE700697119 /* INVDrugName.m in Sources */,
+				1357EFC31F84FE7300767302 /* INVFormAndDrugNameCell.m in Sources */,
+				1357EFC61F8515A300767302 /* INVSearchResultsViewController.m in Sources */,
+				13E7F03D1F8269F600469670 /* INVDrug.m in Sources */,
+				134ACF8C1F83A92F00697119 /* INVForm.m in Sources */,
+				1357EFCF1F85373000767302 /* INVStarsRatingView.m in Sources */,
+				1357EFCC1F8523FA00767302 /* INVDrugCell.m in Sources */,
+				134ACF751F834A7E00697119 /* INVSliderViewController.m in Sources */,
 				13E7F0321F82652700469670 /* main.m in Sources */,
+				13E7F0491F82768800469670 /* INVDrugAnalogsSamples.m in Sources */,
+				134ACF7E1F8377BF00697119 /* INVAnalogsSample.m in Sources */,
+				1325834E1F8577B80074683C /* INVDrugSourceCell.m in Sources */,
+				134ACF921F83BF8500697119 /* INVFormsWithDrugNames.m in Sources */,
+				134ACF781F834CD100697119 /* INVDrugSliderView.m in Sources */,
+				1357EFC91F85203200767302 /* INVDrugAnalogsViewController.m in Sources */,
 				13E7F0241F82652700469670 /* AppDelegate.m in Sources */,
+				13E7F03A1F82670400469670 /* INVMainViewController.m in Sources */,
+				134ACF811F837E9D00697119 /* INVDrugView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +456,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EF64T58JW4;
 				INFOPLIST_FILE = InvoltaTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -294,8 +473,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EF64T58JW4;
 				INFOPLIST_FILE = InvoltaTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
