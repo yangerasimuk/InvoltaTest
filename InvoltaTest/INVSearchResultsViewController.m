@@ -60,24 +60,26 @@ static NSString *const kFormAndDrugNameCell = @"FormAndDrugNameCell";
     [request setURL:[NSURL URLWithString:@"http://api2.docteka.ru/api25/drugs/search"]];
     [request setHTTPMethod:@"POST"];
     
-    NSString *stringBody = [NSString stringWithFormat:@"query=%%%@%%", self.searchQuery];
+    NSString *stringBody = [NSString stringWithFormat:@"query=%@", self.searchQuery];
     request.HTTPBody = [stringBody dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
-// This method is used to receive the data which we get using post method.
+// Запоминаем данные в переменную контроллера
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data {
     
     p_rawJSONData = data;
 }
 
-// This method receives the error report in case of connection is not made to server.
+
+// Ошибка соединения
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     
     NSLog(@"Соединение завершилось ошибкой. Error: %@", error);
 }
 
+// Код сервера
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
@@ -88,7 +90,7 @@ static NSString *const kFormAndDrugNameCell = @"FormAndDrugNameCell";
 }
 
 
-// This method is used to process the data after connection has made successfully.
+// Соединения прошло успешно - работаем с данными
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     
     // Инициируем объект-источник данных
@@ -110,28 +112,20 @@ static NSString *const kFormAndDrugNameCell = @"FormAndDrugNameCell";
         
         INVForm *form = [[INVForm alloc] initWithId:[key integerValue] name:formName];
         
-        NSLog(@"form \n%@", form);
-        
         NSArray *arrDrugNames = (NSArray *)obj;
         
-        NSLog(@"count of drugNames: %ld", [arrDrugNames count]);
-        
-        // перебираем все лекарства данной формы и заносим в масси формы
+        // Перебираем все лекарства данной формы и заносим в масси формы
         [arrDrugNames enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
             NSString *name = obj[@"name"];
             NSInteger nameId = [obj[@"name_id"] integerValue];
             
-            NSLog(@"name: %@, name_id: %ld", name, nameId);
-            
             INVDrugName *drugName = [[INVDrugName alloc] initWithId:nameId name:name formId:form.formId];
-            
-            NSLog(@"drugName \n%@", drugName);
             
             [form.drugNames addObject:drugName];
         }];
         
-        // готовую форму с массивом лекарств заносим в объект p_formsWithDrugNames
+        // Готовую форму с массивом лекарств заносим в объект p_formsWithDrugNames
         [p_formsWithDrugNames.forms addObject:form];
     }];
     
@@ -142,18 +136,9 @@ static NSString *const kFormAndDrugNameCell = @"FormAndDrugNameCell";
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     
     // Первая секция на вывод сообщения "Выберете препарат..."
     return [p_formsWithDrugNames.forms count];
@@ -161,11 +146,7 @@ static NSString *const kFormAndDrugNameCell = @"FormAndDrugNameCell";
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     
-    //    if(section == 0)
-    //        return 1;
-    //    else
     return [p_formsWithDrugNames.forms[section].drugNames count];
 }
 
@@ -188,6 +169,7 @@ static NSString *const kFormAndDrugNameCell = @"FormAndDrugNameCell";
     return cell;
 }
 
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     INVDrugAnalogsViewController *drugVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DrugAnalogsViewController"];
@@ -201,51 +183,5 @@ static NSString *const kFormAndDrugNameCell = @"FormAndDrugNameCell";
     
     [self.navigationController pushViewController:drugVC animated:YES];
 }
-
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
 
 @end

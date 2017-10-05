@@ -33,7 +33,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Но-шпа" borderStyle="roundedRect" placeholder="Но-шпа (пример)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-GM-6rZ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Но-шпа" borderStyle="roundedRect" placeholder="Но-шпа (пример)" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-GM-6rZ">
                                 <rect key="frame" x="16" y="106" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -79,24 +79,6 @@
                 <exit id="Z0e-x0-rrb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="995.625" y="163.73239436619718"/>
-        </scene>
-        <!--Search View Controller-->
-        <scene sceneID="wLy-CV-FJk">
-            <objects>
-                <tableViewController storyboardIdentifier="SearchViewController" id="JyO-SS-OLf" customClass="INVSearchViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="34" sectionFooterHeight="28" id="jXm-VK-Kwv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="JyO-SS-OLf" id="3lE-OK-dMC"/>
-                            <outlet property="delegate" destination="JyO-SS-OLf" id="oex-cZ-N8G"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8kK-jh-gul" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="995.625" y="847.18309859154931"/>
         </scene>
         <!--Search Results View Controller-->
         <scene sceneID="cBq-2F-Ebq">

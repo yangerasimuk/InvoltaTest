@@ -34,6 +34,7 @@
 @implementation INVSliderViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     if([self loadSamples]){
@@ -44,8 +45,9 @@
     else{
 
         // Ошибка при загрузке - выводим сообщение
-        UIAlertController *warningController = [UIAlertController alertControllerWithTitle:@"Внимание!" message:@"Загрузка данных от сервера завершилось ошибкой. Проверьте соединение и повторите опреацию" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *warningController = [UIAlertController alertControllerWithTitle:@"Внимание!" message:@"Загрузка данных с сервера завершилось ошибкой. Проверьте соединение и повторите операцию." preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        
         [warningController addAction:okAction];
         [self presentViewController:warningController animated:YES completion:nil];
     }
@@ -63,7 +65,7 @@
     p_thirdView = [[INVDrugSliderView alloc] initWithFrame:CGRectMake(640, 0, 320, 320)];
     [self.scrollView addSubview:p_thirdView];
     
-    // load all three pages into our scroll view
+    // Инициализация индексов и первая загрузка 3-х вьюх
     prevIndex = [p_analogsSamples.list count]-1;
     currIndex = 0;
     currIndex = 1;

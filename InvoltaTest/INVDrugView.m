@@ -26,20 +26,22 @@
     
     self = [super initWithFrame:frame];
     if(self){
+        
         p_imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
         [self addSubview:p_imageView];
         
         p_labelName = [[UILabel alloc] initWithFrame:CGRectMake(125, 20, 150, 20)];
         [self addSubview:p_labelName];
+        
         p_labelPrice = [[UILabel alloc] initWithFrame:CGRectMake(125, 45, 150, 20)];
         [self addSubview:p_labelPrice];
+        
         p_rating = [[INVStarsRatingView alloc] initWithFrame:CGRectMake(125, 70, 150, 25)];
         [self addSubview:p_rating];
         
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
         
         [self addGestureRecognizer:tapRecognizer];
-        
     }
     return self;
 }

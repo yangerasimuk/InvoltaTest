@@ -21,6 +21,7 @@
 @implementation INVDrugSliderView
 
 - (instancetype)initWithFrame:(CGRect)frame {
+    
     self = [super initWithFrame:frame];
     if(self){
         
@@ -38,41 +39,6 @@
     _analogsSample = analogsSample;
     p_expenseDrugView.drug = analogsSample.expensiveDrug;
     p_cheapDrugView.drug = analogsSample.cheapDrug;
-    
-
-}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
-- (void)setIndex:(int)index {
-    
-    if(index == 0)
-        index = 30;
-    
-    CGFloat colorBase = (CGFloat)255/index;
-    colorBase = colorBase/255.f;
-    
-    NSLog(@"colorBase: %f", colorBase);
-    
-    UIColor *backColor = [UIColor colorWithRed:colorBase
-                                         green:colorBase
-                                          blue:colorBase
-                                         alpha:1];
-    
-    self.backgroundColor = backColor;
-    //[self setNeedsDisplay];
-}
-
-- (void)setBackColor:(UIColor *)backColor {
-    if(backColor) {
-        self.backgroundColor = backColor;
-    }
 }
 
 @end

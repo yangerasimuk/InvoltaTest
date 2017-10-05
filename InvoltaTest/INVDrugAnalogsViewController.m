@@ -46,7 +46,7 @@ static NSString *const kDrugSourceCell = @"DrugSourceCell";
 }
 
 /**
- Перед каждым появлением на экране проверяем необходимость запроса к серверу.
+ Перед каждым появлением на экране проверяем необходимость запроса к серверу
  */
 - (void)viewWillAppear:(BOOL)animated {
         
@@ -65,21 +65,19 @@ static NSString *const kDrugSourceCell = @"DrugSourceCell";
     [request setHTTPMethod:@"POST"];
     
     NSString *stringBody = [NSString stringWithFormat:@"query=%@&form_id=%ld", self.drug.name, self.drugForm.formId];
-    
-    NSLog(@"post string: %@", stringBody);
-    
+
     request.HTTPBody = [stringBody dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
-// This method is used to receive the data which we get using post method.
+
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data {
     
     p_rawJSONData = data;
 }
 
-// This method receives the error report in case of connection is not made to server.
+
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     
     NSLog(@"Соединение завершилось ошибкой. Error: %@", error);
@@ -95,7 +93,7 @@ static NSString *const kDrugSourceCell = @"DrugSourceCell";
 }
 
 
-// This method is used to process the data after connection has made successfully.
+// Успешное соединение - работаем с данными
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     
     // Инициируем объект-источник данных
@@ -103,22 +101,10 @@ static NSString *const kDrugSourceCell = @"DrugSourceCell";
     
     NSDictionary *dictFromJSON = [NSJSONSerialization JSONObjectWithData:p_rawJSONData options:0 error:nil];
     
-#ifdef DEBUG
-    NSLog(@"Соединенение успешно завершилось");
-    NSLog(@"JSON \n%@", dictFromJSON);
-#endif
-
     NSArray *arrDrugs = dictFromJSON[@"drugs"];
-    NSLog(@"dictDrugs count: %ld", [arrDrugs count]);
-    
-    //
-
-    
     NSArray *arrDrugAnalogs = dictFromJSON[@"analogs"];
-    NSLog(@"dictDrugAnalogs count: %ld", [arrDrugAnalogs count]);
     
     [arrDrugAnalogs enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        //
         
         NSDictionary *drugRaw = (NSDictionary *)obj;
         
@@ -129,8 +115,6 @@ static NSString *const kDrugSourceCell = @"DrugSourceCell";
         drug.maxCost = [drugRaw[@"max_cost"] integerValue];
         drug.rating = [drugRaw[@"rating"] integerValue];
         
-        NSLog(@"drug: %@", drug);
-        
         [p_drugAnalogs addObject:drug];
     }];
     
@@ -139,20 +123,12 @@ static NSString *const kDrugSourceCell = @"DrugSourceCell";
     self.drug.maxCost = [arrDrugs[0][@"max_cost"] integerValue];
     self.drug.rating = [arrDrugs[0][@"rating"] integerValue];
     
-    NSLog(@"source drug: %@", self.drug);
-    
     // Добавляем в последние успешно найденные лекарства
     p_findedDrug = [self.drug copy];
     p_findedDrugForm = [self.drugForm copy];
     
     // Загружаем данные в таблицу
     [self.tableView reloadData];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -172,6 +148,7 @@ static NSString *const kDrugSourceCell = @"DrugSourceCell";
     else
         return [p_drugAnalogs count]+1;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 86.f;

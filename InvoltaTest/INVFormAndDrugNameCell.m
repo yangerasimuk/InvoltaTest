@@ -22,25 +22,24 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self){
         
-        // First row
+        // Первая строка
         CGRect rectFirstRowLabel = CGRectMake(16, 4, 288, 36);
         self.labelFirstRow = [[UILabel alloc] initWithFrame:rectFirstRowLabel];
         self.labelFirstRow.textAlignment = NSTextAlignmentLeft;
         self.labelFirstRow.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.labelFirstRow];
         
-        // Second row
-        CGRect rectSecondRowLabel = CGRectMake(16, 40, 288, 36); // x + width = 160
+        // Вторая строка
+        CGRect rectSecondRowLabel = CGRectMake(16, 40, 288, 36);
         self.labelSecondRow = [[UILabel alloc] initWithFrame:rectSecondRowLabel];
         self.labelSecondRow.textAlignment = NSTextAlignmentLeft;
         self.labelSecondRow.backgroundColor = [UIColor clearColor];
         
         [self.contentView addSubview:self.labelSecondRow];
-        
-        
     }
     return self;
 }
+
 
 - (void)setFormName:(NSString *)formName {
     
@@ -75,12 +74,6 @@
         
         self.labelSecondRow.attributedText = textAttributed;
     }
-}
-
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
 }
 
 @end

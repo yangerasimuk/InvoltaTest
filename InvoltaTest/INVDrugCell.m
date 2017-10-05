@@ -20,19 +20,12 @@
 
 @implementation INVDrugCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-    
-}
-
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self){
         
-        // Name + price
+        // Имя + цена
         CGRect rectNameAndPriceLabel = CGRectMake(16, 10, 190, 66);
         self.labelName = [[UILabel alloc] initWithFrame:rectNameAndPriceLabel];
         self.labelName.textAlignment = NSTextAlignmentLeft;
@@ -41,7 +34,7 @@
         self.labelName.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.labelName];
         
-        // Rating
+        // Рейтинг
         CGRect rectRatingView = CGRectMake(210, 33, 100, 20);
         self.ratingView = [[INVStarsRatingView alloc] initWithFrame:rectRatingView];
         self.ratingView.backgroundColor = [UIColor clearColor];
@@ -73,7 +66,7 @@
         
         [nameAndPriceString appendAttributedString:nameAttributed];
 
-        // Price
+        // Цена
         NSString *priceString;
         if(drug.maxCost > 0)
             priceString = [NSString stringWithFormat:@"от %ld до %ld руб.", drug.minCost, drug.maxCost];
